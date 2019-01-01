@@ -1,0 +1,63 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabbed Content</title>
+</head>
+<style>
+    .dropdown{
+        position: relative;
+    }
+    .dropdown-content{
+        display: none;
+        background-color: aqua;
+        position: absolute;
+    }
+    .show {
+        display: block;
+    }
+    div .item {
+        padding: 7px;
+        border: 1px solid grey;
+    }
+    div :hover {
+        background-color: pink;
+    }
+</style>
+
+<body>
+<h1>Removing button & adding 2 other buttons</h1>
+<div id="doubleHolder">
+    <button class="double">double</button>
+</div>
+<h1>Removing list items</h1>
+<ul id="listToDestroy">
+    <li><a href="#">first item</a></li>
+    <li><a href="#">second item</a></li>
+    <li><a href="#">third item</a></li>
+    <li><a href="#">forth item</a></li>
+    <li><a href="#">Fifth item</a></li>
+</ul>
+
+<h1 class="title">Dropdown Menu</h1>
+    <button class="dropdown">Dropdown</button>
+    <div class="dropdown-content">
+        <div class="item"><a href="#">Home</a></div>
+        <div class="item"><a href="#">About Us</a></div>
+        <div class="item"><a href="#">Services</a></div>
+        <div class="item"><a href="#">Contact</a></div>
+    </div>
+
+<h1>Closure & Tabbed content</h1>
+
+
+<h1>checkbox</h1>
+<input type="checkbox" id="checkk">
+<h1>Image</h1>
+<img name="slide" width="200px;" height="200px;">
+<script type="application/javascript" src="script.js"></script>
+</body>
+</html>

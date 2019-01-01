@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <h1>To Do List:</h1>
+    
+    <div id="todo">
+      
+      <input class="term" />
+      <button id="add">Add</button>
+      <ul id="list">
+<!--         <li><label><span>text</span><button>delete</button></label></li> -->
+        
+      </ul>
+    </div>
+    <style>
+      body {
+        background-color: #1d2126;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <script>
+      var items = [];
+      
+      let addBtn = document.querySelector('#add');
+      addBtn.addEventListener('click', (ev) => {
+        ev.preventDefault();
+        let newItem = document.querySelector('.term').value;
+        items.push(newItem);
+        updateListOfItems(newItem);
+      });
+      
+      function updateListOfItems(item) {
+         let ul = document.querySelector('#list');
+        
+        let li = document.createElement('li');
+        // create label
+         let label = document.createElement('label');
+        
+        //create span text
+         let span = document.createElement('span');
+        span.textContent = item;
+        //create btn 
+         let button = document.createElement('button');
+        button.textContent = 'Deletee';
+        button.classList.add('delete');
+        
+        label.appendChild(span);
+        label.appendChild(button);
+
+        li.appendChild(label);
+        
+        ul.appendChild(li);
+        
+        document.querySelector('.delete').addEventListener('click', (ev) => {
+          console.log('', ev.target);
+        })
+        console.log(ul);
+      }
+      
+    
+      
+      
+      
+      
+    </script>
+    
+  </body>
+</html>

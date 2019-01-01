@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabbed Content</title>
+</head>
+<style>
+    .tabs li {
+        display: inline;
+        padding: 10px 14px;
+        background-color: aquamarine;
+    }
+    .panel {
+        background-color: antiquewhite;
+        display: none;
+    }
+    .panel.active {
+        display: block;
+    }
+</style>
+
+<body>
+<h1>Tabs</h1>
+<ul class="tabs">
+    <li data-target="#about">ABOUT</li>
+    <li data-target="#content">CONTENT</li>
+</ul>
+<div class="panel active" id="about">
+ <p> This is about </p>
+</div>
+<div class="panel" id="content">
+<p>This is content </p>
+</div>
+<script type="application/javascript" src="script.js"></script>
+</body>
+</html>
